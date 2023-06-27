@@ -21,7 +21,10 @@
 </head>
 <body>
     <div id="root" class="fs-1 ms-5 mt-5">
-        <i v-if="emails.length < 10" class="fas fa-spinner fa-spin fa-3x"></i>
+        <div v-if="emails.length < 10">
+            <i class="fas fa-spinner fa-spin fa-2x me-4 align-middle"></i>
+            <span class="align-middle">Caricando le mail...</span>
+        </div>
         <ul v-else>
             <li v-for="email in emails">{{email}}</li>
         </ul>
